@@ -169,8 +169,7 @@ If you'd rather not complete these steps manually, you can use the following ins
 ### Checklist
 
 - [ ] Navigate to your project directory.
-- [ ] `git clone --depth 1 git@github.com:ga-wdi-boston/ember-starter.git`
-- [ ] Rename `ember-starter` folder to your app name.
+- [ ] `git clone --depth 1 --no-single-branch git@github.com:ga-wdi-boston/ember-starter.git my-app-name`
 - [ ] `npm install && bower install`
 - [ ] Make our solution branch your master branch.
 
