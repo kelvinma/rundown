@@ -12,6 +12,7 @@ By the end of this lesson, students should be able to:
 
 - Create an Ember 2.0 application, starting with an Ember 1.13.13 application.
 - Create an Ember 2.0 application by using this repo as a starting point.
+- Configure an Ember application to use the pods file structure.
 
 ## Upgrade to Ember 2
 
@@ -101,7 +102,68 @@ After you change into the project directory:
 
 - [ ] Switch to the `solution` branch. (`git checkout solution`)
 - [ ] Delete the `master` branch. (`git branch -d master`)
-- [ ] Rename the `solution` branch to `master`.
+- [ ] Rename the `solution` branch to `master`. (`git branch -m master`)
+
+## Using Pods
+
+We'll use pods instead of the traditional MVC file structure. The reason for this is twofold:
+
+1. Pods structure better emulates thinking in components, where we "separate concerns, not technologies".
+1. UI programming is fundamentally different than backend programming. It helps to emphasize that difference by using a file structure that more closely maps to parts of the UI.
+
+### The Difference
+
+Suppose we had a taqueria. If we had a resource for our different menu items, it might look like this with a traditional MVC file structure:
+
+```
+app/controllers/taco.js
+app/routes/taco.js
+app/models/taco.js
+app/templates/taco.hbs
+```
+
+With a pod-based naming convention, the files would be located at:
+
+```
+app/taco/controller.js
+app/taco/route.js
+app/taco/model.js
+app/taco/template.hbs
+```
+
+Here's the mapping:
+
+```diff
+- app/controllers/taco.js
++ app/taco/controller.js
+
+- app/routes/taco.js
++ app/taco/route.js
+
+- app/models/taco.js
++ app/taco/model.js
+
+- app/templates/taco.hbs
++ app/taco/template.hbs
+```
+
+### Activating Pods
+
+## Cleaning Up
+
+Remove the following directories from your project so you aren't tempted to stray from the pods structure:
+
+- [ ] `app/controllers`
+- [ ] `app/models`
+- [ ] `app/routes`
+- [ ] `app/templates`
+
+Removing the last directory gets rid of the default generated application template. If you want to regenerate it, use
+
+```
+ember destroy template application # should no-op
+ember generate template application
+```
 
 [License](LICENSE)
 ------------------
