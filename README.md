@@ -13,7 +13,9 @@ By the end of this lesson, students should be able to:
 - Create an Ember 2.0 application, starting with an Ember 1.13.13 application.
 - Create an Ember 2.0 application by using this repo as a starting point.
 
-## Checklist
+## Upgrade to Ember 2
+
+### Checklist
 
 - [ ] Create a new Ember application using `ember-cli`.
 - [ ] Edit dependency manifests (`package.json` and `bower.json`) to use Ember 2.
@@ -21,7 +23,7 @@ By the end of this lesson, students should be able to:
 - [ ] Start server. (`ember serve`)
 - [ ] Verify that the browser is loading Ember 2 by opening the web inspector.
 
-## Upgrade to Ember 2
+### Change Version Numbers
 
 ```diff
 diff --git a/bower.json b/bower.json
@@ -75,6 +77,31 @@ index 662d008..6032ddc 100644
  }
  ```
 
+### Install
+
+ ```
+ npm install && bower install
+ ```
+
+## Optional: Use This Repo
+
+### Checklist
+
+- [ ] Navigate to your project directory.
+- [ ] `git clone --depth 1 git@github.com:ga-wdi-boston/ember-starter.git`
+- [ ] Rename `ember-starter` folder to your app name.
+- [ ] `npm install && bower install`
+- [ ] Make our solution branch your master branch.
+
+### Branch Shuffle
+
+Once you've cloned the starter repo, you'll want to use the `solution` branch as the basis for your Ember application, but you won't want to work on `solution`.
+
+After you change into the project directory:
+
+- [ ] Switch to the `solution` branch. (`git checkout solution`)
+- [ ] Delete the `master` branch. (`git branch -d master`)
+- [ ] Rename the `solution` branch to `master`.
 
 [License](LICENSE)
 ------------------
