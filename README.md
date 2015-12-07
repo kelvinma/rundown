@@ -170,8 +170,10 @@ If you'd rather not complete these steps manually, you can use the following ins
 
 - [ ] Navigate to your project directory.
 - [ ] `git clone --depth 1 --no-single-branch git@github.com:ga-wdi-boston/ember-starter.git my-app-name`
+- [ ] Make our solution branch your master branch. (see below)
 - [ ] `npm install && bower install`
-- [ ] Make our solution branch your master branch.
+- [ ] `git remote remove origin`
+- [ ] Create your own remote (on GitHub) and add it as origin.
 
 ### Branch Shuffle
 
@@ -182,7 +184,6 @@ After you change into the project directory:
 - [ ] Switch to the `solution` branch. (`git checkout solution`)
 - [ ] Delete the `master` branch. (`git branch -d master`)
 - [ ] Rename the `solution` branch to `master`. (`git branch -m master`)
-
 
 [License](LICENSE)
 ------------------
