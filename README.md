@@ -129,6 +129,23 @@ Here's the mapping:
 
 ### Activating Pods
 
+```diff
+diff --git a/.ember-cli b/.ember-cli
+index ee64cfe..927fabe 100644
+--- a/.ember-cli
++++ b/.ember-cli
+@@ -5,5 +5,6 @@
+
+     Setting `disableAnalytics` to true will prevent any data from being sent.
+   */
+-  "disableAnalytics": false
++  "disableAnalytics": false,
++  "usePods": true
+ }
+```
+
+Now, if you use `ember generate`, the `--pod` flag will be used automatically.
+
 ## Cleaning Up
 
 Remove the following directories from your project so you aren't tempted to stray from the pods structure:
