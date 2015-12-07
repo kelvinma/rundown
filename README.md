@@ -146,7 +146,7 @@ index ee64cfe..927fabe 100644
 
 Now, if you use `ember generate`, the `--pod` flag will be used automatically.
 
-## Cleaning Up
+### Cleaning Up
 
 Remove the following directories from your project so you aren't tempted to stray from the pods structure:
 
