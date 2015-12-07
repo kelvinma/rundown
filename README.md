@@ -84,25 +84,6 @@ index 662d008..6032ddc 100644
  npm install && bower install
  ```
 
-## Optional: Use This Repo
-
-### Checklist
-
-- [ ] Navigate to your project directory.
-- [ ] `git clone --depth 1 git@github.com:ga-wdi-boston/ember-starter.git`
-- [ ] Rename `ember-starter` folder to your app name.
-- [ ] `npm install && bower install`
-- [ ] Make our solution branch your master branch.
-
-### Branch Shuffle
-
-Once you've cloned the starter repo, you'll want to use the `solution` branch as the basis for your Ember application, but you won't want to work on `solution`.
-
-After you change into the project directory:
-
-- [ ] Switch to the `solution` branch. (`git checkout solution`)
-- [ ] Delete the `master` branch. (`git branch -d master`)
-- [ ] Rename the `solution` branch to `master`. (`git branch -m master`)
 
 ## Using Pods
 
@@ -164,6 +145,29 @@ Removing the last directory gets rid of the default generated application templa
 ember destroy template application # should no-op
 ember generate template application
 ```
+
+## Optional: Use This Repo
+
+If you'd rather not complete these steps manually, you can use the following instructions to use this repository as a basis of your own Ember 2 with Pods® application.
+
+### Checklist
+
+- [ ] Navigate to your project directory.
+- [ ] `git clone --depth 1 git@github.com:ga-wdi-boston/ember-starter.git`
+- [ ] Rename `ember-starter` folder to your app name.
+- [ ] `npm install && bower install`
+- [ ] Make our solution branch your master branch.
+
+### Branch Shuffle
+
+Once you've cloned the starter repo, you'll want to use the `solution` branch as the basis for your Ember application, but you won't want to work on `solution`.
+
+After you change into the project directory:
+
+- [ ] Switch to the `solution` branch. (`git checkout solution`)
+- [ ] Delete the `master` branch. (`git branch -d master`)
+- [ ] Rename the `solution` branch to `master`. (`git branch -m master`)
+
 
 [License](LICENSE)
 ------------------
