@@ -169,7 +169,7 @@ If you'd rather not complete these steps manually, you can use the following ins
 ### Checklist
 
 - [ ] Navigate to your project directory.
-- [ ] `git clone --depth 1 --no-single-branch git@github.com:ga-wdi-boston/ember-starter.git my-app-name`
+- [ ] `git clone git@github.com:ga-wdi-boston/ember-starter.git my-app-name`
 - [ ] Make our solution branch your master branch. (see below)
 - [ ] `npm install && bower install`
 - [ ] `git remote remove origin`
