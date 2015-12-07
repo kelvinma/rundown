@@ -36,7 +36,7 @@ index 35d850a..29c48a2 100644
    "name": "chirper",
    "dependencies": {
 -    "ember": "1.13.11",
-+    "ember": "^2.2.0",
++    "ember": "2.2.0",
      "ember-cli-shims": "0.0.6",
      "ember-cli-test-loader": "0.2.1",
 -    "ember-data": "1.13.15",
@@ -48,11 +48,10 @@ index 35d850a..29c48a2 100644
 -    "jquery": "^1.11.3",
 +    "jquery": "^2.1.4",
      "loader.js": "ember-cli/loader.js#3.4.0",
--    "qunit": "~1.20.0"
-+    "qunit": "~1.20.0",
+     "qunit": "~1.20.0"
 +  },
 +  "resolutions": {
-+    "ember": "^2.2.0",
++    "ember": "2.2.0",
 +    "jquery": "^2.1.4"
    }
  }
@@ -73,7 +72,7 @@ index 662d008..6032ddc 100644
      "ember-disable-proxy-controllers": "^1.0.1",
 -    "ember-export-application-global": "^1.0.4"
 +    "ember-export-application-global": "^1.0.4",
-+    "ember-resolver": "~2.0.3"
++    "ember-resolver": "^2.0.3"
    }
  }
  ```
