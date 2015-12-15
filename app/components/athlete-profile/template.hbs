@@ -4,7 +4,8 @@ Athlete: <strong>{{athlete.lastName}}, {{athlete.firstName}}</strong>
 <table class="table table-striped">
 <thead>
   <tr>
-  <th>Date</th>
+   <th>Edit</th>
+   <th>Date</th>
    <th>Title</th>
    <th>Type</th>
    <th>Distance</th>
@@ -14,9 +15,11 @@ Athlete: <strong>{{athlete.lastName}}, {{athlete.firstName}}</strong>
    <th>Notes</th>
  </tr>
 </thead>
+<tbody>
 {{#each athlete.workouts as |workout|}}
   {{athlete-profile/single-workout workout=workout}}
 
 {{/each}}
+</tbody>
 </table>
 </div>
