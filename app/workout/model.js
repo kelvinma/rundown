@@ -7,6 +7,6 @@ export default DS.Model.extend({
   duration: DS.attr('number'),
   distance: DS.attr('number'),
   reps: DS.attr('number'),
-  newPR: DS.attr('boolean'),
+  newPr: DS.attr('boolean'),
   athlete: DS.belongsTo('athlete', {async: true})
 });
