@@ -1,1 +1,20 @@
 Athlete: <strong>{{athlete.lastName}}, {{athlete.firstName}}</strong>
+
+<table>
+<thead>
+  <tr>
+  <th>Date</th>
+   <th>Title</th>
+   <th>Type</th>
+   <th>Distance</th>
+   <th>Duration</th>
+   <th>Reps</th>
+   <th>New PR?</th>
+   <th>Notes</th>
+ </tr>
+</thead>
+{{#each athlete.workouts as |workout|}}
+  {{athlete-profile/single-workout workout=workout}}
+
+{{/each}}
+</table>
