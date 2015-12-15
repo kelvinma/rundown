@@ -1,27 +1,3 @@
-Athlete: <strong>{{athlete.lastName}}, {{athlete.firstName}} - id: {{athlete.id}}</strong>
-
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-  <tr>
-   <th></th>
-   <th>Date</th>
-   <th>Title</th>
-   <th>Type</th>
-   <th>Distance</th>
-   <th>Duration</th>
-{{!--    <th>Reps</th>
-   <th>New PR?</th> --}}
-   <th>Notes</th>
-   <th>Delete</th>
- </tr>
-</thead>
-<tbody>
-{{#each athlete.workouts as |workout|}}
-  {{athlete-profile/single-workout workout=workout}}
-{{/each}}
-
-<tr>
 <td {{action 'createWorkout' newWorkout}}>{{fa-icon 'fa fa-plus'}}</td>
 <td>{{input placeholder='Workout date' valueBinding='newWorkout.date'}}</td>
 <td>{{input placeholder='Title' valueBinding='newWorkout.title'}}</td>
@@ -31,8 +7,5 @@ Athlete: <strong>{{athlete.lastName}}, {{athlete.firstName}} - id: {{athlete.id}
 {{!-- <td>{{workout.reps}}</td> --}}
 {{!-- <td>{{workout.newPr}}</td> --}}
 <td>{{input placeholder='Notes' valueBinding='newWorkout.notes'}}</td>
-</tr>
 
-</tbody>
-</table>
-</div>
+{{yield}}

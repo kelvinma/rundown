@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'li',
+  tagName: 'tr',
+  // store: Ember.inject.service(),
   newWorkout: {
     date: null,
     title: null,
@@ -9,11 +10,10 @@ export default Ember.Component.extend({
     distance: null,
     duration: null,
     notes: null
-  },
-  actions:{
-    createWorkout: function(){
-      var athleteID = this.get('athlete.id');
-      this.sendAction('routeCreateWorkout', this.get('newWorkout'), athleteID);
+},
+  actions: {
+      createWorkout: function(){
+      this.sendAction('routeCreateWorkout', this.get('newWorkout'));
     }
   }
 });
