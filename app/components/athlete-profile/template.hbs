@@ -1,17 +1,17 @@
 {{#unless editable}}
 
-<span {{action 'toggleExpanded'}}>{{fa-icon 'fa fa-chevron-right'}}</span>Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - Gender: {{athlete.gender}} - ID: {{athlete.id}}</strong>
+<span {{action 'toggleExpanded'}}>{{#unless expanded}}{{fa-icon 'fa fa-chevron-right'}}{{else}}{{fa-icon 'fa fa-chevron-down'}}{{/unless}}</span>  Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - Gender: {{athlete.gender}} - ID: {{athlete.id}}</strong>
 <span {{action 'deleteAthlete'}}>{{fa-icon 'fa fa-trash-o' size=1}}</span>
 <span {{action 'toggleEditable'}}>{{fa-icon 'fa fa-edit' size=1}}</span>
 
 {{else}}
 
-Athlete: <strong>{{input valueBinding='athlete.lastname'}}, {{input valueBinding='athlete.firstname'}} - Gender: {{input valueBinding='athlete.gender'}}</strong>
+<span {{action 'toggleExpanded'}}>{{#unless expanded}}{{fa-icon 'fa fa-chevron-right'}}{{else}}{{fa-icon 'fa fa-chevron-down'}}{{/unless}}</span>  Athlete: <strong>{{input valueBinding='athlete.lastname'}}, {{input valueBinding='athlete.firstname'}} - Gender: {{input valueBinding='athlete.gender'}}</strong>
 {{!-- <button {{action 'deleteAthlete'}}>Delete</button> --}}
 <span {{action 'editAthlete'}}>{{fa-icon 'fa fa-save' size=1}}</span>
 
 {{/unless}}
-
+{{#if expanded}}
 <div class="table-responsive">
 <table class="table table-striped">
 <thead>
@@ -36,3 +36,4 @@ Athlete: <strong>{{input valueBinding='athlete.lastname'}}, {{input valueBinding
 </tbody>
 </table>
 </div>
+{{/if}}

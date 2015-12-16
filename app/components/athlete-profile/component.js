@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'li',
+  tagName: 'p',
   editable: false,
+  expanded: false,
   actions:{
     createWorkout: function(workoutData){
       var athleteID = this.get('athlete.id');
@@ -29,6 +30,9 @@ export default Ember.Component.extend({
     },
     toggleEditable: function(){
       this.toggleProperty('editable');
+    },
+    toggleExpanded: function(){
+      this.toggleProperty('expanded');
     }
   }
 });

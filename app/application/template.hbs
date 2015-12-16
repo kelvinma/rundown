@@ -1,3 +1,100 @@
-{{#link-to 'index' tagName='h1'}} COACHR {{/link-to}}
+<div class='col12 main-window' style="margin-top: 60px" >
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand page-scroll" href="#">
+          {{#link-to 'index'}}<img src="../../images/CoachUp.png"/>{{/link-to}}
+          </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id='current-user'>Login/Register<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Users</li>
+                <li><a href="#" data-toggle="modal" data-target="#logModal">Login</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#" data-toggle="modal" data-target="#regModal">Register</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- end div id navbar -->
+      </div> <!-- end container -->
+    </nav> <!-- end Fixed navbar -->
+
+    <!-- Modal Registration -->
+    <div class="modal fade" id="regModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Please register</h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group margin-bottom-sm">
+              <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+              <input class="form-control" type="text" id="regUsername" placeholder="username" required autofocus>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+              <input class="form-control" type="password" id="regPassword" placeholder="password" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+              <input class="form-control" type="password" id="confirmPassword" placeholder="confirm password" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="register">Register</button>
+          </div>
+            <div class="alert alert-danger fade in" id="regAlert">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Registration unsuccessful</strong>
+          </div>
+          <div class="alert alert-success fade in" id="regProgress">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong><i class="fa fa-spinner fa-pulse"></i>  Logging in...</strong>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end Modal Registration -->
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="logModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Please sign in</h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group margin-bottom-sm">
+              <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+              <input class="form-control" type="text" id="logUsername" placeholder="username" required autofocus>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+              <input class="form-control" type="password" id="logPassword" placeholder="password" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="login">Sign in</button>
+          </div>
+          <div class="alert alert-danger fade in" id="logAlert">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Log in unsuccessful</strong>
+          </div>
+          <div class="alert alert-success fade in" id="logProgress">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong><i class="fa fa-spinner fa-pulse"></i>  Logging in...</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 {{outlet}}
+</div>
