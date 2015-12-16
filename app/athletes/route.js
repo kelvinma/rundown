@@ -31,7 +31,11 @@ export default Ember.Route.extend({
       });
     },
     editWorkout: function(workoutData, workoutID){
-      console.log('edit workout command received. WorkoutID: ');
+      console.log('edit workout command received. WorkoutID: ', workoutID);
+      this.store.findRecord('workout', workoutID).then(function(workoutRecord){
+        workoutRecord.set('workout', workoutData);
+        workoutRecord.save();
+      });
     }
   }
 });

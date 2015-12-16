@@ -1,4 +1,6 @@
-<td {{action 'editWorkout'}}>{{fa-icon 'fa fa-pencil-square-o'}}</td>
+{{#unless editable}}
+
+<td {{action 'toggleEditable'}}>{{fa-icon 'fa fa-pencil-square-o'}}</td>
 <td>{{workout.date }}</td>
 <td>{{workout.title}}</td>
 <td>{{workout.type}}</td>
@@ -8,6 +10,20 @@
 {{!-- <td>{{workout.newPr}}</td> --}}
 <td>{{workout.notes}}</td>
 <td {{action 'deleteWorkout'}}>{{fa-icon 'fa-trash-o'}}</td>
+
+{{else}}
+
+<td {{action 'toggleEditable'}}>{{fa-icon 'fa fa-pencil-square-o'}}</td>
+<td>{{input valueBinding='workout.date'}}</td>
+<td>{{input valueBinding='workout.title'}}</td>
+<td>{{input valueBinding='workout.type'}}</td>
+<td>{{input valueBinding='workout.distance'}}</td>
+<td>{{input valueBinding='workout.duration'}}</td>
+{{!-- <td>{{workout.reps}}</td> --}}
+{{!-- <td>{{workout.newPr}}</td> --}}
+<td>{{input placeholder='Notes' valueBinding='workout.notes'}}</td>
+<td {{action 'editWorkout' newWorkout}}>{{fa-icon 'fa fa-save'}}</td>
+{{/unless}}
 
 {{yield}}
 
