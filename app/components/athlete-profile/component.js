@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'li',
+  editable: false,
   actions:{
     createWorkout: function(workoutData){
       var athleteID = this.get('athlete.id');
@@ -20,10 +21,14 @@ export default Ember.Component.extend({
       console.log('delete Athlete action sent with athleteID: ', athleteID);
       this.sendAction('routeDeleteAthlete', athleteID);
     },
-    editAthlete: function(){
+    editAthlete: function(athleteData){
       var athleteID = this.get('athlete.id');
       console.log('edit Athlete action sent with athleteID: ', athleteID);
-      this.sendAction('routeEditAthlete', athleteID);
+      this.toggleProperty('editable');
+      this.sendAction('editAthlete', athleteData, athleteID);
+    },
+    toggleEditable: function(){
+      this.toggleProperty('editable');
     }
   }
 });

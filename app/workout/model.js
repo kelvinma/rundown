@@ -6,8 +6,6 @@ export default DS.Model.extend({
   type: DS.attr('string'),
   duration: DS.attr('number'),
   distance: DS.attr('number'),
-  // reps: DS.attr('number'),
-  // newPr: DS.attr('boolean'),
   notes: DS.attr('string'),
   athlete: DS.belongsTo('athlete')
 });

@@ -49,6 +49,13 @@ export default Ember.Route.extend({
         this.store.unloadRecord(athleteRecord);
         console.log("athlete " + athleteID + " deleted");
       });
+    },
+    editAthlete: function(athleteData, athleteID){
+      this.store.findRecord('athlete', athleteID).then(function(athleteRecord){
+        athleteRecord.set('athlete', athleteData);
+        athleteRecord.save();
+      });
+      console.log('edit athlete request received for athleteID: ', athleteID);
     }
   }
 });

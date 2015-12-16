@@ -1,6 +1,15 @@
-Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - id: {{athlete.id}}</strong>
+{{#unless editable}}
+
+Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - Gender: {{athlete.gender}} - ID: {{athlete.id}}</strong>
 <button {{action 'deleteAthlete'}}>Delete</button>
-<button {{action 'editAthlete'}}>Edit</button>
+<button {{action 'toggleEditable'}}>Edit</button>
+{{else}}
+
+Athlete: <strong>{{input valueBinding='athlete.lastname'}}, {{input valueBinding='athlete.firstname'}} - Gender: {{input valueBinding='athlete.gender'}}</strong>
+{{!-- <button {{action 'deleteAthlete'}}>Delete</button> --}}
+<button {{action 'editAthlete'}}>Save</button>
+
+{{/unless}}
 
 <div class="table-responsive">
 <table class="table table-striped">
