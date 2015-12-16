@@ -2,18 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'li',
-  newWorkout: {
-    date: null,
-    title: null,
-    type: null,
-    distance: null,
-    duration: null,
-    notes: null
-  },
   actions:{
-    createWorkout: function(){
+    createWorkout: function(workoutData){
       var athleteID = this.get('athlete.id');
-      this.sendAction('routeCreateWorkout', this.get('newWorkout'), athleteID);
+      this.sendAction('routeCreateWorkout', workoutData, athleteID);
+    },
+    deleteWorkout: function(workoutID){
+      console.log('Athlete Profile Parent Layer delete received. workoutID: ', workoutID);
+      this.sendAction('routeDeleteWorkout', workoutID);
+    },
+    editWorkout: function(workoutData, workoutID){
+      console.log('Athlete Profile Parent Layer edit received. workoutID: ', workoutID);
+      this.sendAction('routeEditWorkout', workoutData, workoutID);
     }
   }
 });

@@ -1,4 +1,4 @@
-<td>{{fa-icon 'fa fa-pencil-square-o'}}</td>
+<td {{action 'editWorkout'}}>{{fa-icon 'fa fa-pencil-square-o'}}</td>
 <td>{{workout.date }}</td>
 <td>{{workout.title}}</td>
 <td>{{workout.type}}</td>
@@ -7,7 +7,7 @@
 {{!-- <td>{{workout.reps}}</td> --}}
 {{!-- <td>{{workout.newPr}}</td> --}}
 <td>{{workout.notes}}</td>
-<td>{{fa-icon 'fa-trash-o'}}</td>
+<td {{action 'deleteWorkout'}}>{{fa-icon 'fa-trash-o'}}</td>
 
 {{yield}}
 

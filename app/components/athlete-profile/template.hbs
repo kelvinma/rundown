@@ -18,21 +18,9 @@ Athlete: <strong>{{athlete.lastName}}, {{athlete.firstName}} - id: {{athlete.id}
 </thead>
 <tbody>
 {{#each athlete.workouts as |workout|}}
-  {{athlete-profile/single-workout workout=workout}}
+  {{athlete-profile/single-workout workout=workout routeEditWorkout='editWorkout' routeDeleteWorkout='deleteWorkout'}}
 {{/each}}
-
-<tr>
-<td {{action 'createWorkout' newWorkout}}>{{fa-icon 'fa fa-plus'}}</td>
-<td>{{input placeholder='Workout date' valueBinding='newWorkout.date'}}</td>
-<td>{{input placeholder='Title' valueBinding='newWorkout.title'}}</td>
-<td>{{input placeholder='Type' valueBinding='newWorkout.type'}}</td>
-<td>{{input placeholder='Distance' valueBinding='newWorkout.distance'}}</td>
-<td>{{input placeholder='Duration' valueBinding='newWorkout.duration'}}</td>
-{{!-- <td>{{workout.reps}}</td> --}}
-{{!-- <td>{{workout.newPr}}</td> --}}
-<td>{{input placeholder='Notes' valueBinding='newWorkout.notes'}}</td>
-</tr>
-
+{{athlete-profile/new-workout routeCreateWorkout='createWorkout'}}
 </tbody>
 </table>
 </div>

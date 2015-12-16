@@ -9,12 +9,25 @@ export default Ember.Route.extend({
   },
   actions: {
     createWorkout: function(workoutData, athleteID){
-      console.log('Create Workout received from component of athlete_id: ' + athleteID);
+      console.log('create workout command received');
+      console.log(workoutData);
+      console.log(athleteID);
       var newWorkout = this.store.createRecord('workout', workoutData);
+
       this.store.findRecord('athlete', athleteID).then(function(athlete){
-        athlete.get('workouts').addObject(newWorkout);
+        athlete.get('workouts').pushObject(newWorkout);
+        athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
         newWorkout.save();
       });
+    },
+    deleteWorkout: function(workoutID){
+      this.store.findRecord('workout', workoutID).then(function(workoutRecord){
+        workoutRecord.destroyRecord();
+      console.log('delete workout command received. WorkoutID: ', workoutID);
+      });
+    },
+    editWorkout: function(workoutData, workoutID){
+      console.log('edit workout command received. WorkoutID: ');
     }
   }
 });
