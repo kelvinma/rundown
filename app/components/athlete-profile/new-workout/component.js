@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'tr',
+  expanded: false,
   // store: Ember.inject.service(),
   newWorkout: {
     date: null,
@@ -12,7 +13,10 @@ export default Ember.Component.extend({
     notes: null
 },
   actions: {
-      createWorkout: function(){
+    toggleExpanded: function(){
+      this.toggleProperty('expanded');
+    },
+    createWorkout: function(){
       console.log('create workout command sent');
       console.log(this.get('newWorkout'));
       this.sendAction('routeCreateWorkout', this.get('newWorkout'));

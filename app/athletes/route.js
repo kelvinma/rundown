@@ -12,12 +12,16 @@ export default Ember.Route.extend({
       console.log('create workout command received');
       console.log(workoutData);
       console.log(athleteID);
-      var newWorkout = this.store.createRecord('workout', workoutData);
 
+      // this.store.findRecord('athlete', athleteID).then(function(athlete){
+      //   athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
+      // });
+
+      // var newWorkout = this.store.createRecord('workout', workoutData);
       this.store.findRecord('athlete', athleteID).then(function(athlete){
-        athlete.get('workouts').pushObject(newWorkout);
+        // athlete.get('workouts').pushObject(newWorkout);
         athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
-        newWorkout.save();
+        // newWorkout.save();
       });
     },
     deleteWorkout: function(workoutID){
