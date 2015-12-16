@@ -22,11 +22,11 @@ export default Ember.Component.extend({
       console.log('delete Athlete action sent with athleteID: ', athleteID);
       this.sendAction('routeDeleteAthlete', athleteID);
     },
-    editAthlete: function(athleteData){
+    editAthlete: function(){
       var athleteID = this.get('athlete.id');
       console.log('edit Athlete action sent with athleteID: ', athleteID);
       this.toggleProperty('editable');
-      this.sendAction('editAthlete', athleteData, athleteID);
+      this.sendAction('routeEditAthlete', this.get('athlete'), athleteID);
     },
     toggleEditable: function(){
       this.toggleProperty('editable');

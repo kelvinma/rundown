@@ -51,11 +51,12 @@ export default Ember.Route.extend({
       });
     },
     editAthlete: function(athleteData, athleteID){
+      console.log('edit athlete request received for athlete: ', athleteID);
       this.store.findRecord('athlete', athleteID).then(function(athleteRecord){
         athleteRecord.set('athlete', athleteData);
         athleteRecord.save();
+        console.log('athlete updated', athleteRecord.get('firstname'));
       });
-      console.log('edit athlete request received for athleteID: ', athleteID);
     }
   }
 });
