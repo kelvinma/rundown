@@ -1,13 +1,14 @@
 {{#unless editable}}
 
-Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - Gender: {{athlete.gender}} - ID: {{athlete.id}}</strong>
-<button {{action 'deleteAthlete'}}>Delete</button>
-<button {{action 'toggleEditable'}}>Edit</button>
+<span {{action 'toggleExpanded'}}>{{fa-icon 'fa fa-chevron-right'}}</span>Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - Gender: {{athlete.gender}} - ID: {{athlete.id}}</strong>
+<span {{action 'deleteAthlete'}}>{{fa-icon 'fa fa-trash-o' size=1}}</span>
+<span {{action 'toggleEditable'}}>{{fa-icon 'fa fa-edit' size=1}}</span>
+
 {{else}}
 
 Athlete: <strong>{{input valueBinding='athlete.lastname'}}, {{input valueBinding='athlete.firstname'}} - Gender: {{input valueBinding='athlete.gender'}}</strong>
 {{!-- <button {{action 'deleteAthlete'}}>Delete</button> --}}
-<button {{action 'editAthlete'}}>Save</button>
+<span {{action 'editAthlete'}}>{{fa-icon 'fa fa-save' size=1}}</span>
 
 {{/unless}}
 
