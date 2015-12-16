@@ -5,8 +5,6 @@ export default Ember.Component.extend({
   actions:{
     createWorkout: function(workoutData){
       var athleteID = this.get('athlete.id');
-      workoutData.athlete = athleteID;
-      console.log('set workoutData athleteID: ', workoutData.athlete);
       this.sendAction('routeCreateWorkout', workoutData, athleteID);
     },
     deleteWorkout: function(workoutID){

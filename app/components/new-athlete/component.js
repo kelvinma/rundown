@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'li',
   newAthlete: {
-    firstName: null,
-    lastName: null,
+    firstname: null,
+    lastname: null,
     gender: null
   },
   actions: {
