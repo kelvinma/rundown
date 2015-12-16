@@ -1,8 +1,9 @@
 <h3>Your athletes:</h3>
 <ul>
 {{#each model.athlete as |athlete|}}
-  {{athlete-profile athlete=athlete routeCreateWorkout='createWorkout' routeDeleteWorkout='deleteWorkout' routeEditWorkout='editWorkout'}}
+  {{athlete-profile athlete=athlete routeCreateWorkout='createWorkout' routeDeleteWorkout='deleteWorkout' routeEditWorkout='editWorkout' routeDeleteAthlete='deleteAthlete' routeEditAthlete='editAthlete'}}
 {{/each}}
+{{new-athlete routeCreateAthlete='createAthlete'}}
 </ul>
 
 {{#link-to 'index'}}Back home{{/link-to}}

@@ -17,16 +17,17 @@ export default Ember.Route.extend({
       //   athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
       // });
 
-      // var newWorkout = this.store.createRecord('workout', workoutData);
+      var newWorkout = this.store.createRecord('workout', workoutData);
       this.store.findRecord('athlete', athleteID).then(function(athlete){
-        // athlete.get('workouts').pushObject(newWorkout);
+        athlete.get('workouts').pushObject(newWorkout);
         athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
-        // newWorkout.save();
+        newWorkout.save();
       });
     },
     deleteWorkout: function(workoutID){
       this.store.findRecord('workout', workoutID).then(function(workoutRecord){
         workoutRecord.destroyRecord();
+        this.store.unloadRecord(workoutRecord);
       console.log('delete workout command received. WorkoutID: ', workoutID);
       });
     },
@@ -35,6 +36,18 @@ export default Ember.Route.extend({
       this.store.findRecord('workout', workoutID).then(function(workoutRecord){
         workoutRecord.set('workout', workoutData);
         workoutRecord.save();
+      });
+    },
+    createAthlete: function(athleteData){
+      console.log('newAthlete action received in Route with athlete Data ', athleteData);
+      var newAthlete = this.store.createRecord('athlete', athleteData);
+      newAthlete.save();
+    },
+    deleteAthlete: function(athleteID){
+      this.store.findRecord('athlete', athleteID).then(function(athleteRecord){
+        athleteRecord.destroyRecord();
+        this.store.unloadRecord(athleteRecord);
+        console.log("athlete " + athleteID + " deleted");
       });
     }
   }
