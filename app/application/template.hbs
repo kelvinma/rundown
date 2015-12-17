@@ -94,7 +94,16 @@
         </div>
       </div>
     </div>
-
+<nav>
+{{#if session.isAuthenticated}}
+<button {{action 'logout'}}>Logout</button>
+{{else}}
+  {{#link-to 'login'}}
+    Login
+  {{/link-to}}
+{{/if}}
+</nav>
+<hr/>
 
 {{outlet}}
 </div>
