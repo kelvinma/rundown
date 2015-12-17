@@ -1,14 +1,14 @@
 <td {{action 'toggleExpanded'}}>{{fa-icon 'fa fa-plus'}}</td>
 {{#if expanded}}
 
-<td>{{input placeholder='Workout date' valueBinding='newWorkout.date' enter='createWorkout'}}</td>
-<td>{{input placeholder='Title' valueBinding='newWorkout.title' enter='createWorkout'}}</td>
-<td>{{input placeholder='Type' valueBinding='newWorkout.type' enter='createWorkout'}}</td>
-<td>{{input placeholder='Distance' valueBinding='newWorkout.distance' enter='createWorkout'}}</td>
-<td>{{input placeholder='Duration' valueBinding='newWorkout.duration' enter='createWorkout'}}</td>
+<td class='col-md-2'>{{input placeholder='Workout date' valueBinding='newWorkout.date' enter='createWorkout'}}</td>
+<td class='col-md-2'>{{input placeholder='Title' valueBinding='newWorkout.title' enter='createWorkout'}}</td>
+<td class='col-md-1'>{{input placeholder='Type' valueBinding='newWorkout.type' enter='createWorkout'}}</td>
+<td class='col-md-1'>{{input placeholder='Distance' valueBinding='newWorkout.distance' enter='createWorkout'}}</td>
+<td class='col-md-1'>{{input placeholder='Duration' valueBinding='newWorkout.duration' enter='createWorkout'}}</td>
 {{!-- <td>{{workout.reps}}</td> --}}
 {{!-- <td>{{workout.newPr}}</td> --}}
-<td>{{input placeholder='Notes' valueBinding='newWorkout.notes' enter='createWorkout'}}</td>
+<td class='col-md-5'>{{input placeholder='Notes' valueBinding='newWorkout.notes' enter='createWorkout'}}</td>
 <td {{action 'createWorkout' newWorkout}}>{{fa-icon 'fa fa-save'}}</td>
 {{/if}}
 {{yield}}

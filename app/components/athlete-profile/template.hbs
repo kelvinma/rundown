@@ -1,6 +1,6 @@
 {{#unless editable}}
 
-<span {{action 'toggleExpanded'}}>{{#unless expanded}}{{fa-icon 'fa fa-chevron-right'}}{{else}}{{fa-icon 'fa fa-chevron-down'}}{{/unless}}</span>  Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}} - Gender: {{athlete.gender}} - ID: {{athlete.id}}</strong>
+<span {{action 'toggleExpanded'}}>{{#unless expanded}}{{fa-icon 'fa fa-chevron-right'}}{{else}}{{fa-icon 'fa fa-chevron-down'}}{{/unless}}</span>  Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}}</strong>
 
 <span {{action 'deleteAthlete'}}>{{fa-icon 'fa fa-trash-o' size=1}}</span>
 <span {{action 'toggleEditable'}}>{{fa-icon 'fa fa-edit' size=1}}</span>
@@ -17,14 +17,14 @@
 <thead>
   <tr>
    <th></th>
-   <th>Date</th>
-   <th>Title</th>
-   <th>Type</th>
-   <th>Distance</th>
-   <th>Duration</th>
+   <th class='col-md-2'>Date</th>
+   <th class='col-md-2'>Title</th>
+   <th class='col-md-1'>Type</th>
+   <th class='col-md-1'>Distance</th>
+   <th class='col-md-1'>Duration</th>
 {{!--    <th>Reps</th>
    <th>New PR?</th> --}}
-   <th>Notes</th>
+   <th class='col-md-5'>Notes</th>
    <th></th>
  </tr>
 </thead>

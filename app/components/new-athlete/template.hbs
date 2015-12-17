@@ -1,7 +1,9 @@
-{{fa-icon 'fa fa-plus'}} Add New Athlete:
+<span {{action 'toggleExpanded'}}>{{fa-icon 'fa fa-plus'}}</span> {{#if expanded}}Add New Athlete:
+
 {{input placeholder='First Name' valueBinding='newAthlete.firstname'}}
 {{input placeholder='Last Name' valueBinding='newAthlete.lastname'}}
 {{input placeholder='Gender' valueBinding='newAthlete.gender'}}
 <span {{action 'createAthlete' newAthlete}}>{{fa-icon 'fa fa-save'}}</span>
+{{/if}}
 
 {{yield}}

@@ -1,11 +1,20 @@
+<div class="row">
+<div class="col-md-1 gutter">
+</div>
+<div class="col-md-10 main">
 <h3>Your athletes:</h3>
 
 {{#each model.athlete as |athlete|}}
   {{athlete-profile athlete=athlete routeCreateWorkout='createWorkout' routeDeleteWorkout='deleteWorkout' routeEditWorkout='editWorkout' routeDeleteAthlete='deleteAthlete' routeEditAthlete='editAthlete'}}
 {{/each}}
+
 {{new-athlete routeCreateAthlete='createAthlete'}}
 
 
 {{#link-to 'index'}}Back home{{/link-to}}
 
 {{outlet}}
+</div>
+<div class="col-md-1 gutter">
+</div>
+</div>

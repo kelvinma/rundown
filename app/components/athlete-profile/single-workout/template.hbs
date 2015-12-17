@@ -14,11 +14,11 @@
 {{else}}
 
 <td></td>
-<td>{{input valueBinding='workout.date'}}</td>
-<td>{{input valueBinding='workout.title'}}</td>
-<td>{{input valueBinding='workout.type'}}</td>
-<td>{{input valueBinding='workout.distance'}}</td>
-<td>{{input valueBinding='workout.duration'}}</td>
+<td>{{input valueBinding='workout.date' enter='editWorkout'}}</td>
+<td>{{input valueBinding='workout.title' enter='editWorkout'}}</td>
+<td>{{input valueBinding='workout.type' enter='editWorkout'}}</td>
+<td>{{input valueBinding='workout.distance' enter='editWorkout'}}</td>
+<td>{{input valueBinding='workout.duration' enter='editWorkout'}}</td>
 {{!-- <td>{{workout.reps}}</td> --}}
 {{!-- <td>{{workout.newPr}}</td> --}}
 <td>{{input placeholder='Notes' valueBinding='workout.notes'}}</td>
