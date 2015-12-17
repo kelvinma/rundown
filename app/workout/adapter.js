@@ -7,9 +7,12 @@ export default ApplicationAdapter.extend({
     console.log('HIT THE WORKOUT ADAPTER');
     console.log(snapshot);
     console.log(this.host);
-    var data= this.serialize({"workout": snapshot}, {includeId: true});
+
+    var data = this.serialize(snapshot, {includeId: true});
     var id= snapshot.id;
     var url = [this.host, type.modelName+ 's', id].join("/");
+
+    console.log(data);
 
     return new Ember.RSVP.Promise(function(resolve, reject){
       Ember.$.ajax({

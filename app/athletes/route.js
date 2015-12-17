@@ -18,12 +18,12 @@ export default Ember.Route.extend({
       // });
       var self = this;
       var newWorkout = this.store.createRecord('workout', workoutData);
-      newWorkout.save().then(function(){
+      newWorkout.save().then(function(savedWorkout){
         self.store.findRecord('athlete', athleteID).then(function(athlete){
 
           // console.log(athlete.get('firstname') + athlete.get('lastname'));
           // newWorkout.set('athlete', athleteID);
-          athlete.get('workouts').pushObject(newWorkout).save();
+          athlete.get('workouts').pushObject(savedWorkout).save();
           // athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
 
           console.log("Athlete ID is " + newWorkout.get('athlete.id'));
