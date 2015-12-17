@@ -6,8 +6,8 @@ export default Ember.Component.extend({
   expanded: false,
   actions:{
     createWorkout: function(workoutData){
-      var athleteID = this.get('athlete.id');
-      this.sendAction('routeCreateWorkout', workoutData, athleteID);
+      console.log('create athlete action sent from profile parent layer');
+      this.sendAction('routeCreateWorkout', workoutData, this.get('athlete.id'));
     },
     deleteWorkout: function(workoutID){
       console.log('Athlete Profile Parent Layer delete received. workoutID: ', workoutID);

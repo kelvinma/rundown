@@ -16,13 +16,20 @@ export default Ember.Route.extend({
       // this.store.findRecord('athlete', athleteID).then(function(athlete){
       //   athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
       // });
-
+      var self = this;
       var newWorkout = this.store.createRecord('workout', workoutData);
-      this.store.findRecord('athlete', athleteID).then(function(athlete){
-        athlete.get('workouts').pushObject(newWorkout);
-        athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
-        newWorkout.save();
+      newWorkout.save().then(function(){
+        self.store.findRecord('athlete', athleteID).then(function(athlete){
+
+          // console.log(athlete.get('firstname') + athlete.get('lastname'));
+          // newWorkout.set('athlete', athleteID);
+          athlete.get('workouts').pushObject(newWorkout).save();
+          // athlete.get('workouts').forEach(function(w){console.log(w.get('title'));});
+
+          console.log("Athlete ID is " + newWorkout.get('athlete.id'));
+        });
       });
+
     },
     deleteWorkout: function(workoutID){
       this.store.findRecord('workout', workoutID).then(function(workoutRecord){
