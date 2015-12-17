@@ -19,6 +19,7 @@ export default Ember.Component.extend({
     createWorkout: function(){
       console.log('create workout command sent');
       console.log(this.get('newWorkout'));
+      this.toggleProperty('expanded');
       this.sendAction('routeCreateWorkout', this.get('newWorkout'));
     }
   }
