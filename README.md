@@ -1,60 +1,25 @@
-![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)
+#CoachUp
 
-# Ember-starter
+##Statement
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This project represents my final project for General Assembly's Web Development Immersive. Our project parameters were essentially wide open, with the only requirements being basic CRUD actions.
 
-## Prerequisites
+I used this as an opportunity to challenge myself as best as I could while still having access to my excellent instructors at General Assembly. I wanted to take on a challenge that I likely would not be able to accomplish with the mentorship available to me in class.
 
-You will need the following things properly installed on your computer.
+As such, I set two primary goals for myself:
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* Build a project with a front-end framework, in this case EmberJS
+* Implement third-party authentication with a social media platform such as Facebook, Spotify or Strava
+* Use a different combination of back-end framework and database structure
 
-## Installation
+In the end, my project was able to accompish two of my three primary goals. My Ember application is functional with all four CRUD actions performing on two models, and my back-end framework is Express paired with a SQL database via Sequelize.
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+There were several issues that came up with the Ember CRUD actions, which hindered my ability to achieve my goal of authentication.
 
-## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
 [License](LICENSE)
 ------------------
 
 Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+Kelvin Ma, all rights reserved.

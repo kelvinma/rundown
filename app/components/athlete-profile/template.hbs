@@ -1,6 +1,13 @@
 {{#unless editable}}
 
-<span {{action 'toggleExpanded'}}>{{#unless expanded}}{{fa-icon 'fa fa-chevron-right'}}{{else}}{{fa-icon 'fa fa-chevron-down'}}{{/unless}}</span>  Athlete: <strong>{{athlete.lastname}}, {{athlete.firstname}}</strong>
+<span {{action 'toggleExpanded'}}>
+  {{#unless expanded}}
+    {{fa-icon 'fa fa-chevron-right'}}
+  {{else}}
+    {{fa-icon 'fa fa-chevron-down'}}{{/unless}}
+</span>
+Athlete:
+<strong>{{#link-to 'athlete' athlete}}{{athlete.lastname}}, {{athlete.firstname}}{{/link-to}}</strong>
 
 <span {{action 'deleteAthlete'}}>{{fa-icon 'fa fa-trash-o' size=1}}</span>
 <span {{action 'toggleEditable'}}>{{fa-icon 'fa fa-edit' size=1}}</span>
@@ -37,3 +44,5 @@
 </table>
 </div>
 {{/if}}
+
+{{outlet}}
