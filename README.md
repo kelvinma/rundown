@@ -1,5 +1,12 @@
 #CoachUp
 
+Back end repository: https://github.com/kelvinma/coachR-api
+
+Deployed Front-End Application: http://kelvinma.github.io/coachR/
+
+Deployed Back-End Application: https://intense-escarpment-9142.herokuapp.com/
+
+
 ##Statement
 
 This project represents my final project for General Assembly's Web Development Immersive. Our project parameters were essentially wide open, with the only requirements being basic CRUD actions.
