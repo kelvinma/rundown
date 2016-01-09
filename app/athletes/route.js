@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function (params) {
+  model: function(params) {
     return {
       athlete: this.store.findAll('athlete'),
       workouts: this.store.findAll('workout')
